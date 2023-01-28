@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Rileys Trunk</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <h1>PROJECTS</h1>
+          <ul>
+            <button class="btn" id="counterbtn">
+              <li><a href="#counter">Counter</a></li>
+            </button>
+            <button class="btn" id="shopbtn">
+              <li><a href="#shop">Storefront</a></li>
+            </button>
+            <button class="btn" id="calculatorbtn">
+              <li><a href="#calculator">Calculator</a></li>
+            </button>
+            <button class="btn" id="blackjackbtn">
+              <li><a href="#blackjack">Blackjack</a></li>
+            </button>
+            <button class="btn" id="tictactoebtn">
+              <li><a href="#tictactoe">TicTacToe</a></li>
+            </button>
+            <button class="btn" id="trackerbtn">
+              <li><a href="#tracker">Tracker</a></li>
+            </button>
+          </ul>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="row" id="counter">
+          <div class="row-wrap">
+            <div class="box counter" draggable="true">
+              <p>Count</p>
+              <h1 id="count">0</h1>
+              <button class="btn" id="add" onclick="add1()">Increment</button>
+              <button class="btn" id="sub" onclick="sub1()">Decrement</button>
+              <button class="btn" id="clear" onclick="reset()">Clear</button>
+              <button class="btn" id="save-btn" onclick="save()">Save</button>
+              <p>History</p>
+              <p id="save-list"></p>
+            </div>
+            <div class="box row-text">
+              <h1 class="row-title">Click Counter</h1>
+              <div class="row-desc">
+                <p>
+                  This simple counting app is made using javascript functions to
+                  increment and decrement a given variable, and store that value
+                  in a bank for possible later use.
+                </p>
+                <p>
+                  This showcases a fundamental concept in javascript and can be
+                  extrapolated into larger uses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="shop">
+          <div class="row-wrap">
+            <div class="shop-container">
+              <div class="box shop-item" draggable="false">
+                <div class="shop-image">
+                  <img
+                    draggable="false"
+                    src="https://assets.hermes.com/is/image/hermesproduct/freestyle-sneaker--222920ZH90-worn-1-0-0-800-800_b.jpg"
+                  />
+                </div>
+                <div class="shop-text">
+                  <div class="shop-title">
+                    <p>Nike Shoe Time</p>
+                    <p id="item-price">$14.99</p>
+                  </div>
+                  <div class="shop-desc">Purple/White : Leather/Rubber</div>
+                  <button class="btn item-btn">ADD TO CART</button>
+                  <p id="error"></p>
+                </div>
+              </div>
+              <div class="box shop-item" draggable="false">
+                <div class="shop-image">
+                  <img
+                    draggable="false"
+                    src="https://assets.hermes.com/is/image/hermesproduct/freestyle-sneaker--222920ZH90-worn-1-0-0-800-800_b.jpg"
+                  />
+                </div>
+                <div class="shop-text">
+                  <div class="shop-title">
+                    <p>Nike Shoe Time</p>
+                    <p id="item-price">$14.99</p>
+                  </div>
+                  <div class="shop-desc">Purple/White : Leather/Rubber</div>
+                  <button class="btn item-btn">ADD TO CART</button>
+                  <p id="error"></p>
+                </div>
+              </div>
+            </div>
+            <div class="box shop-cart-container">
+              <div class="cart-title">Shopping Cart</div>
+              <div class="cart-list">
+                Pending Items
+                <div class="list-item">
+                  <button class="shopbtn btn delete-item">x</button>
+                  <div class="item-name">Nike Shoe</div>
+                  <div class="item-price">$14.99</div>
+                  x
+                  <div class="item-quantity">
+                    <div class="quantity-amnt">2</div>
+                    <div class="quantity-btns">
+                      <button class="shopbtn btn subitem">-</button>
+                      <button class="shopbtn btn additem">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-total">Total:</div>
+              <button class="btn checkout">Checkout</button>
+            </div>
+            <div class="box row-text">
+              <h1 class="row-title">Storefront</h1>
+              <div class="row-desc">
+                <p>
+                  This is a quick modular view of a product card for an
+                  ecommerce site.
+                </p>
+                <p>
+                  The goal is to bring the full purchasing process into each
+                  card with options to add and remove from cart, access to cart,
+                  editing of quanities and product details all will be done on
+                  the individual cards rather than entering a separate form.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="calculator">
+          <div class="row-wrap">
+            <div class="box calculator" draggable="false">
+              <h1>CALCU-TRON</h1>
+              <div class="calc-display" aria-placeholder="0"><p>0</p></div>
+              <div class="calc-btns">
+                <button class="btn" onclick="add()">+</button>
+                <button class="btn" onclick="sub()">-</button>
+                <button class="btn" onclick="mult()">x</button>
+                <button class="btn" onclick="divi()">%</button>
+              </div>
+              <div class="calc-numb">
+                <button class="btn calcbtn" value="1">1</button>
+                <button class="btn calcbtn" value="2">2</button>
+                <button class="btn calcbtn" value="3">3</button>
+                <button class="btn calcbtn" value="4">4</button>
+                <button class="btn calcbtn" value="5">5</button>
+                <button class="btn calcbtn" value="6">6</button>
+                <button class="btn calcbtn" value="7">7</button>
+                <button class="btn calcbtn" value="8">8</button>
+                <button class="btn calcbtn" value="9">9</button>
+                <button class="btn calcbtn" value="0">0</button>
+              </div>
+              <div class="calc-equals">
+                <button class="btn clear" onclick="calcClear()">C</button>
+                <button class="btn equal" onclick="calcEquate()">=</button>
+              </div>
+            </div>
+            <div class="box row-text">
+              <h1 class="row-title">Calculator</h1>
+              <div class="row-desc">
+                <p>
+                  A simple calculator meant to replicate basic functionality.
+                </p>
+                <p>
+                  In future updates, a copy and paste function is planned as
+                  well.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row blackjack" id="blackjack">
+          <h1>BLACKJACK</h1>
+          <div class="game-container">
+            <div class="play-area">
+              <div class="play-stats">Hand:</div>
+              <div class="card-box">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="card-num">?</div>
+                    <div class="card-num">?</div>
+                    <div class="card-num">?</div>
+                  </div>
+                </div>
+              </div>
+              <p id="messageEl">Lets Play BlackJack!</p>
+              <div class="play-btns">
+                <button class="btn hit" onclick="hit()">Hit!</button>
+                <button class="btn stay" onclick="stay()">Stay!</button>
+              </div>
+            </div>
+            <div class="bj-panel">
+              <div class="history-area">
+                <h2>History</h2>
+                <div class="history-row">
+                  <div class="history-id"><p>#</p></div>
+                  <div class="history-cards"><p>CARDS</p></div>
+                  <div class="history-total"><p>Total</p></div>
+                </div>
+                <div class="history-box">
+                  <div class="history-row">
+                    <div class="history-id"><p></p></div>
+                    <div class="history-cards"><p></p></div>
+                    <div class="history-total"><p></p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="info-area">
+                <div class="info-facts">
+                  <p>Fun Fact:</p>
+                  <div class="bj-facts"></div>
+                </div>
+                <div class="game-stats">
+                  <p>Rounds Played:<span>43</span></p>
+                  <p>Total Wins</p>
+                  <p>Total Losses</p>
+                </div>
+              </div>
+              <div class="control-area">
+                <button class="btn card-newgame" onclick="newGame()">
+                  New Game
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="tictactoe">
+          <div class="row-wrap">
+            <div class="box arrays">
+              <ul>
+                <li>List Item #1</li>
+                <li>List Item #2</li>
+                <li>List Item #3</li>
+                <li>List Item #4</li>
+                <li>List Item #5</li>
+                <li>List Item #6</li>
+              </ul>
+            </div>
+            <div class="box arrays">
+              <ul>
+                <li>List Item #1</li>
+                <li>List Item #2</li>
+                <li>List Item #3</li>
+                <li>List Item #4</li>
+                <li>List Item #5</li>
+                <li>List Item #6</li>
+              </ul>
+            </div>
+            <div class="box arrays">
+              <ul>
+                <li>List Item #1</li>
+                <li>List Item #2</li>
+                <li>List Item #3</li>
+                <li>List Item #4</li>
+                <li>List Item #5</li>
+                <li>List Item #6</li>
+              </ul>
+            </div>
+            <div class="box arrays">
+              <ul>
+                <li>List Item #1</li>
+                <li>List Item #2</li>
+                <li>List Item #3</li>
+                <li>List Item #4</li>
+                <li>List Item #5</li>
+                <li>List Item #6</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="tracker">
+          <div class="row-wrap">
+            <div class="box calculator" draggable="true">
+              <p>Calculator</p>
+              <div class="calc-display" aria-placeholder="0"><p>0</p></div>
+              <div class="calc-btns">
+                <button class="btn" onclick="add()">+</button>
+                <button class="btn" onclick="sub()">-</button>
+                <button class="btn" onclick="mult()">x</button>
+                <button class="btn" onclick="divi()">%</button>
+              </div>
+              <div class="calc-numb">
+                <button class="btn calcbtn" value="1">1</button>
+                <button class="btn calcbtn" value="2">2</button>
+                <button class="btn calcbtn" value="3">3</button>
+                <button class="btn calcbtn" value="4">4</button>
+                <button class="btn calcbtn" value="5">5</button>
+                <button class="btn calcbtn" value="6">6</button>
+                <button class="btn calcbtn" value="7">7</button>
+                <button class="btn calcbtn" value="8">8</button>
+                <button class="btn calcbtn" value="9">9</button>
+                <button class="btn calcbtn" value="0">0</button>
+              </div>
+              <div class="calc-equals">
+                <button class="btn clear" onclick="calcClear()">C</button>
+                <button class="btn equal" onclick="calcEquate()">=</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./logic.js"></script>
+  </body>
+</html>
